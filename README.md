@@ -41,8 +41,10 @@ API Endpoints
 Create a Room
 
    URL: POST    http://localhost:3000/rooms
-   Body:
-   JSON
+   
+ Body:
+      
+      JSON
 
       {
         "numberOfSeats": 10,
@@ -61,9 +63,10 @@ JSON
 
 Book a Room
 URL: POST    http://localhost:3000/bookings
-Body:
-
-JSON
+      
+   Body:
+      
+      JSON
 
       {
         "customerName": "John Doe",
@@ -76,15 +79,16 @@ JSON
 Response:
 
 JSON
-
-{
-  "customerName": "John Doe",
-  "date": "2024-09-15",
-  "startTime": "10:00",
-  "endTime": "12:00"
-}
+      
+      {
+        "customerName": "John Doe",
+        "date": "2024-09-15",
+        "startTime": "10:00",
+        "endTime": "12:00"
+      }
 
 List All Rooms
+
 URL: GET    http://localhost:3000/rooms
 
 
