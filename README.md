@@ -37,40 +37,44 @@ npm start
 The server will start on http://localhost:3000.
 
 API Endpoints
-Create a Room
-URL: POST /rooms
-Body:
-JSON
 
-{
-  "numberOfSeats": 10,
-  "pricePerHour": 100
-}
+Create a Room
+
+   URL: POST    http://localhost:3000/rooms
+   Body:
+   JSON
+
+      {
+        "numberOfSeats": 10,
+        "pricePerHour": 100
+      }
 
 Response:
 JSON
 
-{
-  "id": 1,
-  "numberOfSeats": 10,
-  "pricePerHour": 100,
-  "bookings": []
-}
+      {
+        "id": 1,
+        "numberOfSeats": 10,
+        "pricePerHour": 100,
+        "bookings": []
+      }
 
 Book a Room
-URL: POST /bookings
+URL: POST    http://localhost:3000/bookings
 Body:
+
 JSON
 
-{
-  "customerName": "John Doe",
-  "date": "2024-09-15",
-  "startTime": "10:00",
-  "endTime": "12:00",
-  "roomId": 1
-}
+      {
+        "customerName": "John Doe",
+        "date": "2024-09-15",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomId": 1
+      }
 
 Response:
+
 JSON
 
 {
@@ -81,60 +85,58 @@ JSON
 }
 
 List All Rooms
-URL: GET /rooms
+URL: GET    http://localhost:3000/rooms
 
 
 Response:
 JSON
 
-[
-  {
-    "id": 1,
-    "numberOfSeats": 10,
-    "pricePerHour": 100,
-    "bookings": [
-      {
-        "customerName": "John Doe",
-        "date": "2024-09-15",
-        "startTime": "10:00",
-        "endTime": "12:00"
-      }
-    ]
-  }
-]
+      [
+        {
+          "id": 1,
+          "numberOfSeats": 10,
+          "pricePerHour": 100,
+          "bookings": [
+            {
+              "customerName": "John Doe",
+              "date": "2024-09-15",
+              "startTime": "10:00",
+              "endTime": "12:00"
+            }
+          ]
+        }
+      ]
 
 List All Customers with Booking Details
-URL: GET /bookings/customers
+URL: GET    http://localhost:3000/bookings/customers
 
 
 Response:
 JSON
 
-[
-  {
-    "customerName": "John Doe",
-    "roomName": "Room 1",
-    "date": "2024-09-15",
-    "startTime": "10:00",
-    "endTime": "12:00"
-  }
-]
+      [
+        {
+          "customerName": "John Doe",
+          "roomName": "Room 1",
+          "date": "2024-09-15",
+          "startTime": "10:00",
+          "endTime": "12:00"
+        }
+      ]
 
 List All Bookings of a Specific Customer
-URL: GET /bookings/customer-bookings/:customerName
+URL: GET    http://localhost:3000/bookings/customer-bookings/:customerName
 
 
-Response:
-
-
-JSON
-
-[
-  {
-    "roomName": "Room 1",
-    "date": "2024-09-15",
-    "startTime": "10:00",
-    "endTime": "12:00"
-  }
-]
+   Response:
+   JSON
+      
+      [
+        {
+          "roomName": "Room 1",
+          "date": "2024-09-15",
+          "startTime": "10:00",
+          "endTime": "12:00"
+        }
+      ]
 
